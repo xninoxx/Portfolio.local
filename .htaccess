@@ -1,0 +1,7 @@
+# Verbied toegang tot gevoelige bestanden
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# Custom foutpagina
+ErrorDocument 404 /404.html

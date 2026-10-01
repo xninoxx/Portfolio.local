@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nino Portfolio | Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesp.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo"> <span class="logo-style">&lt;/Nino&gt;</span> </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="vaardigheden.html">Vaardigheden</a>
+            <a href="projecten.html">Projecten</a>
+            <a href="werk.html">Werk</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <section class="contact-header">
+            <h1>Contacteer mij!</h1>
+            <p>Benieuwd naar de mogelijkheden? Stuur gerust een bericht!</p>
+        </section>
+
+        <section class="contact-grid">
+            <!-- Contactgegevens (zonder opvulling) -->
+            <div class="contact-info">
+                <h2>Direct contact</h2>
+                <p>Ik probeer berichten altijd binnen 24 uur te beantwoorden.</p>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <span class="info-label">E-mailadres</span>
+                        <a href="mailto:info@ninowolfsen.nl" class="info-value">info@ninowolfsen.nl</a>
+                    </div>
+                </div>
+
+                <div class="socials">
+                    <h3>Socials</h3>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <form action="contact.php" method="POST">
+                <!-- style="display:none;" verbergt het veld direct in de HTML -->
+                <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+
+                <label for="flname">Volledige naam:</label><br>
+                <input type="text" id="flname" name="flname" required><br><br>
+
+                <label for="email">E-mailadres:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="vraag">Je vraag of bericht:</label><br>
+                <textarea id="vraag" name="vraag" rows="5" required></textarea><br><br>
+
+                <input type="submit" value="Verzenden">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Nino Wolfsen</p>
+    </footer>
+
+</body>
+
+</html>
