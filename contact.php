@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(isset($_SESSION["SENT"])){
+    header("Location: contact.html");
+}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!empty($_POST['website'])) {
@@ -27,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
         if (mail($to, $subject, $email_body, $headers)) {
+            $_SESSION["SENT"] = 0;
             header("Location: contact.html?status=succes");
             exit;
         } else {
