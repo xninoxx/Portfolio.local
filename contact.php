@@ -1,8 +1,12 @@
 <?php
 session_start();
+
 if(isset($_SESSION["SENT"])){
     header("Location: contact.html");
+    exit; // dit is blijkbaar NODIG, AL ZOU HEADER HET MOETEN REDIRECTEN EN STOPPEN, MAAR DAT DOET HIJ NIET.
+    // WANT FUCK MIJ EN MIJN LEVEN. - Peter
 }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!empty($_POST['website'])) {
@@ -31,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
         if (mail($to, $subject, $email_body, $headers)) {
-            $_SESSION["SENT"] = 0;
+            $_SESSION["SENT"] = 1;
             header("Location: contact.html?status=succes");
             exit;
         } else {
