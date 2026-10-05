@@ -1,18 +1,26 @@
 * {
   box-sizing: border-box;
-
 }
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: linear-gradient(118deg, #CAA9FC 5.42%, #9465DD 29.32%, #7852B7 48.53%, #6E4DAA 61.76%, #58418C 94.2%);
   color: black;
 }
 
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Header & Navigatie */
 .site-header {
   background: linear-gradient(90deg, #A9EBAF 0%, #85D18C 25%, #6FBA76 49.52%, #60AA67 74.52%, #618965 100%);
   padding: 15px 20px;
@@ -41,24 +49,188 @@ nav a {
 }
 
 .logo:hover,
-nav a:hover {
-  opacity: 0.6;
+nav a:hover,
+nav a.active {
+  opacity: 0.7;
 }
 
+/* Tekst verlopen */
+.naam-style {
+  background: linear-gradient(90deg, #0857d7, #0f24b1, #051774);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Contact Structuur */
+.contact-container {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-header h1 {
+  font-size: 38px;
+  margin: 0 0 10px 0;
+}
+
+.contact-header p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Linkerkolom - Contact Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info h2 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.info-card {
+  padding: 20px;
+  background: linear-gradient(90deg, rgba(8, 87, 215, 0.16), rgba(15, 37, 177, 0.18), rgba(6, 29, 142, 0.15));
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-label {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.email-link {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
+}
+
+.socials h3 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Rechterkolom - Formulier */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 16px;
+  color: #000;
+  outline: none;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #ffffff;
+  border-color: #0857d7;
+  box-shadow: 0 0 0 3px rgba(8, 87, 215, 0.25);
+}
+
+/* Verzendknop */
+.btn-submit {
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #A9EBAF 0%, #60AA67 100%);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover {
+  opacity: 0.85;
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+/* Footer */
 footer p {
   font-size: 10px;
   text-align: center;
+  margin: 15px 0;
 }
 
+/* Mobiele weergave */
 @media screen and (max-width: 768px) {
-  h1 { font-size: 32px; }
-  h2 { font-size: 26px; }
-  p { font-size: 16px; }
-
   .site-header {
     flex-direction: column;
     gap: 15px;
     text-align: center;
   }
-}
 
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-header h1 {
+    font-size: 30px;
+  }
+}

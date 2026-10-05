@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nino Portfolio | Contact</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesp.css">
+    <link rel="stylesheet" href="stylesc.css">
 </head>
 
 <body>
@@ -21,49 +21,56 @@
         </nav>
     </header>
 
-    <main class="container main-content">
-        <section class="contact-header">
-            <h1>Contacteer mij!</h1>
-            <p>Benieuwd naar de mogelijkheden? Stuur gerust een bericht!</p>
-        </section>
-
-        <section class="contact-grid">
-            <!-- Contactgegevens (zonder opvulling) -->
-            <div class="contact-info">
-                <h2>Direct contact</h2>
-                <p>Ik probeer berichten altijd binnen 24 uur te beantwoorden.</p>
-
-                <div class="info-cards">
-                    <div class="info-card">
-                        <span class="info-label">E-mailadres</span>
-                        <a href="mailto:info@ninowolfsen.nl" class="info-value">info@ninowolfsen.nl</a>
-                    </div>
-                </div>
-
-                <div class="socials">
-                    <h3>Socials</h3>
-                    <div class="social-links">
-                        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-                    </div>
-                </div>
+    <main>
+        <section class="contact-container">
+            <div class="contact-header">
+                <h1>Neem <span class="naam-style">Contact</span> op</h1>
+                <p>Benieuwd naar de mogelijkheden? Stuur gerust een bericht!</p>
             </div>
 
-            <form action="contact.php" method="POST">
-                <!-- style="display:none;" verbergt het veld direct in de HTML -->
-                <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+            <div class="contact-grid">
+                <!-- Contactgegevens -->
+                <div class="contact-info">
+                    <h2>Direct contact</h2>
+                    <p>Ik probeer berichten altijd binnen 24 uur te beantwoorden.</p>
 
-                <label for="flname">Volledige naam:</label><br>
-                <input type="text" id="flname" name="flname" required><br><br>
+                    <div class="info-card">
+                        <span class="info-label">E-mailadres</span>
+                        <a href="mailto:info@ninowolfsen.nl" class="email-link">info@ninowolfsen.nl</a>
+                    </div>
 
-                <label for="email">E-mailadres:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                    <div class="socials">
+                        <h3>Socials</h3>
+                        <div class="social-links">
+                            <a href="https://github.com" target="_blank" rel="noopener">GitHub &rarr;</a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn &rarr;</a>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="vraag">Je vraag of bericht:</label><br>
-                <textarea id="vraag" name="vraag" rows="5" required></textarea><br><br>
+                <!-- Formulier -->
+                <form action="contact.php" method="POST" class="contact-form">
+                    <!-- Verborgen honeypot tegen spambots -->
+                    <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
 
-                <input type="submit" value="Verzenden">
-            </form>
+                    <div class="form-group">
+                        <label for="flname">Volledige naam:</label>
+                        <input type="text" id="flname" name="flname" placeholder="Jouw naam" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mailadres:</label>
+                        <input type="email" id="email" name="email" placeholder="jouw.email@voorbeeld.nl" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vraag">Je vraag of bericht:</label>
+                        <textarea id="vraag" name="vraag" rows="5" placeholder="Typ hier je bericht..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Verzenden</button>
+                </form>
+            </div>
         </section>
     </main>
 
