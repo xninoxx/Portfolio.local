@@ -11,13 +11,13 @@
 
 <body>
     <header class="site-header">
-        <a href="index.html" class="logo"> <span class="logo-style">&lt;/Nino&gt;</span> </a>
+        <a href="index.html" class="logo"><span class="logo-style">&lt;/Nino&gt;</span></a>
 
         <nav>
             <a href="index.html">Home</a>
             <a href="vaardigheden.html">Vaardigheden</a>
             <a href="projecten.html">Projecten</a>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
@@ -29,28 +29,27 @@
             </div>
 
             <div class="contact-grid">
-                <!-- Contactgegevens -->
-                <div class="contact-info">
+                <!-- Linker tegel -->
+                <div class="contact-card">
                     <h2>Direct contact</h2>
                     <p>Ik probeer berichten altijd binnen 24 uur te beantwoorden.</p>
 
-                    <div class="info-card">
+                    <div>
                         <span class="info-label">E-mailadres</span>
                         <a href="mailto:info@ninowolfsen.nl" class="email-link">info@ninowolfsen.nl</a>
                     </div>
 
                     <div class="socials">
                         <h3>Socials</h3>
-                        <div class="social-links">
-                            <a href="https://github.com" target="_blank" rel="noopener">GitHub &rarr;</a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn &rarr;</a>
-                        </div>
+                        <ul class="social-list">
+                            <li><a href="https://github.com/xninoxx" target="_blank" rel="noopener">GitHub &rarr;</a></li>
+                            <li><a href="https://www.linkedin.com/in/nino-w-521167435/?isSelfProfile=true" target="_blank" rel="noopener">LinkedIn &rarr;</a></li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Formulier -->
-                <form action="contact.php" method="POST" class="contact-form">
-                    <!-- Verborgen honeypot tegen spambots -->
+                <!-- Rechter tegel (Formulier) -->
+                <form action="contact.php" method="POST" class="contact-card">
                     <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
 
                     <div class="form-group">
