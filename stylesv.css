@@ -48,6 +48,7 @@ nav a:hover {
 footer p {
   font-size: 10px;
   text-align: center;
+  margin-bottom: 1.5vh;
 }
 
 @media screen and (max-width: 768px) {
