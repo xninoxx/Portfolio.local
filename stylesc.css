@@ -130,8 +130,15 @@ input:focus, textarea:focus {
 
 .btn-submit:hover { opacity: 0.85; }
 
-/* Footer & Responsive */
-footer p { font-size: 10px; text-align: center; padding: 15px 0; }
+footer {
+  padding: 12px 0 16px;
+}
+
+footer p {
+  font-size: 11px;
+  text-align: center;
+  margin: 0;
+}
 
 @media screen and (max-width: 768px) {
   .site-header { flex-direction: column; gap: 15px; text-align: center; }
