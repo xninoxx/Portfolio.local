@@ -1,12 +1,11 @@
 * {
   box-sizing: border-box;
-
 }
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: linear-gradient(118deg, #CAA9FC 5.42%, #9465DD 29.32%, #7852B7 48.53%, #6E4DAA 61.76%, #58418C 94.2%);
@@ -45,16 +44,116 @@ nav a:hover {
   opacity: 0.6;
 }
 
+.skills-container {
+  flex: 1;
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 10px;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro-section h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.intro-section p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Grid layout met 2 kolommen boven en 2 beneden op grote schermen */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Glassmorphism kaarten */
+.skill-card {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.skill-card p {
+  font-size: 15px;
+  line-height: 1.4;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* Flexbox container voor de skill tags */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+}
+
+/* Stijl van de donkergroene tags */
+.skill-tag {
+  background-color: #2e6034;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Accent voor Scrum */
+.skill-tag.highlight {
+  background-color: #1e4223;
+  border: 1px solid #A9EBAF;
+}
+
+/* Stijl voor de leerdoelen tags */
+.skill-tag.learning {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+}
+
 footer p {
   font-size: 10px;
   text-align: center;
   margin-bottom: 1.5vh;
 }
 
-@media screen and (max-width: 768px) {
+/* Responsive voor mobiel */
+@media screen and (max-width: 800px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
   h1 { font-size: 32px; }
-  h2 { font-size: 26px; }
-  p { font-size: 16px; }
 
   .site-header {
     flex-direction: column;
