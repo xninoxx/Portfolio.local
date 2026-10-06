@@ -1,173 +1,110 @@
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="nl">
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(118deg, #CAA9FC 5.42%, #9465DD 29.32%, #7852B7 48.53%, #6E4DAA 61.76%, #58418C 94.2%);
-  color: black;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nino Portfolio | Vaardigheden</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Devicon & FontAwesome Iconen -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="stylesv.css">
+</head>
 
-.site-header {
-  background: linear-gradient(90deg, #A9EBAF 0%, #85D18C 25%, #6FBA76 49.52%, #60AA67 74.52%, #618965 100%);
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo"> <span class="logo-style">&lt;/Nino&gt;</span> </a>
 
-nav {
-  display: flex;
-  gap: 20px;
-}
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="vaardigheden.html">Vaardigheden</a>
+            <a href="projecten.html">Projecten</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-.logo,
-nav a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
+    <main class="skills-container">
+        <!-- Welkomsttekst met blauwe gradient titel -->
+        <section class="intro-section">
+            <h1 class="gradient-title">Mijn Vaardigheden</h1>
+            <p>Als Software Development student bouw ik continu aan mijn technische skills, tools en werkwijzen.</p>
+        </section>
 
-.logo-style {
-  background: linear-gradient(90deg, #06d0eb, #2b44e7, #051774);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
+        <!-- Grid met 4 skill-categorieën -->
+        <section class="skills-grid">
 
-.logo:hover,
-nav a:hover {
-  opacity: 0.6;
-}
+            <!-- Categorie 1: Frontend & Coderen -->
+            <article class="skill-card">
+                <div class="card-header">
+                    <h2>Frontend Development</h2>
+                </div>
+                <p>De talen en technieken die ik gebruik om webpagina's op te bouwen en te stylen.</p>
 
-.skills-container {
-  flex: 1;
-  width: 95%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px 10px;
-}
+                <div class="skills-list">
+                    <span class="skill-tag"><i class="devicon-html5-plain"></i> HTML5</span>
+                    <span class="skill-tag"><i class="devicon-css3-plain"></i> CSS3</span>
+                    <span class="skill-tag"><i class="fa-solid fa-border-all"></i> Flexbox & Grid</span>
+                    <span class="skill-tag"><i class="fa-solid fa-mobile-screen-button"></i> Responsive Design</span>
+                    <span class="skill-tag"><i class="fa-solid fa-bolt"></i> Emmet</span>
+                </div>
+            </article>
 
-.intro-section {
-  text-align: center;
-  margin-bottom: 40px;
-}
+            <!-- Categorie 2: Tools, OS & Design -->
+            <article class="skill-card">
+                <div class="card-header">
+                    <h2>Tools & Systemen</h2>
+                </div>
+                <p>Software, besturingssystemen en designprogramma's waar ik mee werk.</p>
 
-/* Blauwe gradient titel */
-.gradient-title {
-  font-size: 38px;
-  margin-bottom: 10px;
-  background: linear-gradient(90deg, #06d0eb, #2b44e7, #051774);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  display: inline-block;
-}
+                <div class="skills-list">
+                    <span class="skill-tag"><i class="devicon-vscode-plain"></i> VS Code</span>
+                    <span class="skill-tag"><i class="devicon-git-plain"></i> Git & GitHub</span>
+                    <span class="skill-tag"><i class="devicon-figma-plain"></i> Figma</span>
+                    <span class="skill-tag"><i class="devicon-apache-plain"></i> Apache Server</span>
+                    <span class="skill-tag"><i class="devicon-linux-plain"></i> Linux</span>
+                    <span class="skill-tag"><i class="devicon-archlinux-plain"></i> Arch Linux</span>
+                </div>
+            </article>
 
-.intro-section p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.5;
-}
+            <!-- Categorie 3: Samenwerken & Processen -->
+            <article class="skill-card">
+                <div class="card-header">
+                    <h2>Werkwijze & Soft Skills</h2>
+                </div>
+                <p>Hoe ik werk binnen een team en problemen aanpak tijdens het bouwen.</p>
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
+                <div class="skills-list">
+                    <span class="skill-tag highlight"><i class="fa-solid fa-people-group"></i> Scrum / Agile</span>
+                    <span class="skill-tag"><i class="fa-solid fa-handshake"></i> Teamwork</span>
+                    <span class="skill-tag"><i class="fa-solid fa-brain"></i> Probleemoplossend denken</span>
+                    <span class="skill-tag"><i class="fa-solid fa-bug"></i> Code Debugging</span>
+                </div>
+            </article>
 
-.skill-card {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 16px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+            <!-- Categorie 4: Leerdoelen -->
+            <article class="skill-card roadmap-card">
+                <div class="card-header">
+                    <h2>Leerdoelen 2026 / 2027</h2>
+                </div>
+                <p>Technieken en talen waar ik mij komende periode op ga focussen tijdens mijn studie.</p>
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
+                <div class="skills-list">
+                    <span class="skill-tag learning"><i class="devicon-javascript-plain"></i> JavaScript</span>
+                    <span class="skill-tag learning"><i class="devicon-csharp-plain"></i> C#</span>
+                    <span class="skill-tag learning"><i class="devicon-php-plain"></i> PHP</span>
+                    <span class="skill-tag learning"><i class="fa-solid fa-cubes"></i> OOP</span>
+                    <span class="skill-tag learning"><i class="devicon-mysql-plain"></i> Databases / MySQL</span>
+                </div>
+            </article>
 
-.card-header h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 24px;
-}
+        </section>
+    </main>
 
-.skill-card p {
-  font-size: 15px;
-  line-height: 1.4;
-  opacity: 0.9;
-  margin-bottom: 20px;
-}
+    <footer>
+        <p>© 2026 Nino Wolfsen</p>
+    </footer>
 
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: auto;
-}
+</body>
 
-/* Donkergroene gradient knoppen met iconen */
-.skill-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #387040 0%, #1e4223 100%);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.skill-tag i {
-  font-size: 16px;
-}
-
-/* Accent voor Scrum */
-.skill-tag.highlight {
-  background: linear-gradient(135deg, #2e5933 0%, #15331a 100%);
-  border: 1px solid #85D18C;
-}
-
-/* Leerdoelen gradient tags */
-.skill-tag.learning {
-  background: linear-gradient(135deg, rgba(30, 30, 30, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
-  border: 1px dashed rgba(255, 255, 255, 0.6);
-}
-
-footer p {
-  font-size: 10px;
-  text-align: center;
-  margin-bottom: 1.5vh;
-}
-
-@media screen and (max-width: 800px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .gradient-title { font-size: 32px; }
-
-  .site-header {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-}
+</html>
