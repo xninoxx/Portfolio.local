@@ -1,20 +1,23 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background: linear-gradient(118deg, #CAA9FC 5.42%, #9465DD 29.32%, #7852B7 48.53%, #6E4DAA 61.76%, #58418C 94.2%);
   color: black;
 }
 
+/* Header & Navigatie */
 .site-header {
   background: linear-gradient(90deg, #A9EBAF 0%, #85D18C 25%, #6FBA76 49.52%, #60AA67 74.52%, #618965 100%);
-  padding: 15px 20px;
+  padding: 15px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,24 +47,28 @@ nav a:hover {
   opacity: 0.6;
 }
 
+/* Container */
 .skills-container {
   flex: 1;
   width: 95%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 40px 10px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+/* Introductie */
 .intro-section {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
-/* Blauwe gradient titel */
 .gradient-title {
   font-size: 38px;
-  margin-bottom: 10px;
-  background: linear-gradient(90deg, #06d0eb, #2b44e7, #051774);
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #0857d7, #0f24b1, #051774);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -69,25 +76,27 @@ nav a:hover {
 }
 
 .intro-section p {
-  font-size: 18px;
+  font-size: 17px;
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
+/* Grid layout */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 24px;
 }
 
+/* Glassmorphism Kaarten */
 .skill-card {
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 16px;
-  padding: 30px;
+  padding: 26px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -95,38 +104,38 @@ nav a:hover {
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card-header h2 {
   margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 24px;
+  margin-bottom: 8px;
+  font-size: 23px;
 }
 
 .skill-card p {
   font-size: 15px;
   line-height: 1.4;
   opacity: 0.9;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
+/* Tags flexbox */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   margin-top: auto;
 }
 
-/* Donkergroene gradient knoppen met iconen */
 .skill-tag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: linear-gradient(135deg, #387040 0%, #1e4223 100%);
   color: white;
-  padding: 8px 16px;
+  padding: 8px 15px;
   border-radius: 20px;
   font-size: 14px;
   font-weight: 600;
@@ -138,36 +147,52 @@ nav a:hover {
   font-size: 16px;
 }
 
-/* Accent voor Scrum */
 .skill-tag.highlight {
   background: linear-gradient(135deg, #2e5933 0%, #15331a 100%);
   border: 1px solid #85D18C;
 }
 
-/* Leerdoelen gradient tags */
 .skill-tag.learning {
   background: linear-gradient(135deg, rgba(30, 30, 30, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
   border: 1px dashed rgba(255, 255, 255, 0.6);
 }
 
-footer p {
-  font-size: 10px;
-  text-align: center;
-  margin-bottom: 1.5vh;
+/* Footer */
+footer {
+  padding: 12px 0 16px;
 }
 
-@media screen and (max-width: 800px) {
+footer p {
+  font-size: 11px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsiveness voor kleinere schermen */
+@media screen and (max-height: 800px) {
+  body {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    height: auto;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media screen and (max-width: 650px) {
-  .gradient-title { font-size: 32px; }
+  .gradient-title {
+    font-size: 30px;
+  }
 
   .site-header {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     text-align: center;
   }
 }

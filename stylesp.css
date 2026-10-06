@@ -62,6 +62,14 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
+.title-style {
+  background: linear-gradient(90deg, #0857d7, #0f24b1, #051774);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+}
+
 .intro-section p {
   font-size: 18px;
   max-width: 700px;
@@ -163,7 +171,9 @@ footer p {
 }
 
 @media screen and (max-width: 650px) {
-  h1 { font-size: 32px; }
+  h1 {
+    font-size: 32px;
+  }
 
   .site-header {
     flex-direction: column;
