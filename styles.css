@@ -1,3 +1,5 @@
+/* Main, achtergrond en navigatiebar */
+
 * {
   box-sizing: border-box;
 }
@@ -5,7 +7,6 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  /* VERANDERD: min-height in plaats van height zorgt dat de pagina meegroeit als de content op mobiel langer wordt */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,9 +18,10 @@ main {
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 40px 0;
-  /* Toegevoegd voor wat ademruimte boven/onder op mobiel */
+  padding: 40px 20px;
 }
+
+
 
 h1,
 h2,
@@ -77,6 +79,9 @@ nav a {
 nav a:hover {
   opacity: 0.6;
 }
+
+/* Einde van main, achtergrond en navigatiebar ^ */
+
 
 .intro {
   display: flex;
