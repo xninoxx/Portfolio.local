@@ -4,7 +4,7 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Honeypot check tegen spambots (verborgen veld)
-    if (!empty($_POST['website'])) {
+    if (!empty($_POST['website']) || isset($_SESSION['SENT'])) {
         header("Location: contact.html?status=succes");
         exit;
     }
