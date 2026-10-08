@@ -624,19 +624,3 @@ textarea:focus {
     height: auto;
   }
 }
-
-  .intro-image {
-    align-items: center;
-    padding-right: 0;
-    width: 100%;
-  }
-
-  .profile-img {
-    width: 60%;
-    border-width: 10px;
-  }
-
-  .latest-project {
-    width: 100%;
-    max-width: 100%;
-  }
