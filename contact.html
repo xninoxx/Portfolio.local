@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nino Portfolio | Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-contact">
+    <header class="site-header">
+        <a href="index.html" class="logo"><span class="logo-style">&lt;/Nino&gt;</span></a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="vaardigheden.html">Vaardigheden</a>
+            <a href="projecten.html">Projecten</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-container">
+            <div class="contact-header">
+                <h1>Neem <span class="naam-style">Contact</span> op</h1>
+                <p>Benieuwd naar de mogelijkheden? Stuur gerust een bericht!</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Linker tegel -->
+                <div class="contact-card">
+                    <h2>Direct contact</h2>
+                    <p>Ik probeer berichten altijd binnen 24 uur te beantwoorden.</p>
+
+                    <div>
+                        <span class="info-label">E-mailadres</span>
+                        <a href="mailto:info@ninowolfsen.nl" class="email-link">info@ninowolfsen.nl</a>
+                    </div>
+
+                    <div class="socials">
+                        <h3>Socials</h3>
+                        <ul class="social-list">
+                            <li><a href="https://github.com/xninoxx" target="_blank" rel="noopener">GitHub &rarr;</a></li>
+                            <li><a href="https://www.linkedin.com/in/nino-w-521167435/?isSelfProfile=true" target="_blank" rel="noopener">LinkedIn &rarr;</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rechter tegel (Formulier) -->
+                <form action="contact.php" method="POST" class="contact-card">
+                    <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+
+                    <div class="form-group">
+                        <label for="flname">Volledige naam:</label>
+                        <input type="text" id="flname" name="flname" placeholder="Jouw naam" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mailadres:</label>
+                        <input type="email" id="email" name="email" placeholder="jouw.email@voorbeeld.nl" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vraag">Je vraag of bericht:</label>
+                        <textarea id="vraag" name="vraag" rows="5" placeholder="Typ hier je bericht..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Verzenden</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Nino Wolfsen</p>
+    </footer>
+
+</body>
+
+</html>
