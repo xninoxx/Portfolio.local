@@ -1,0 +1,10 @@
+mijn gittea en github is gekoppeld
+
+voor de toekomst:
+
+git add .
+
+git commit -m "Korte omschrijving van je wijziging"
+
+git push github main
+git push gitea main

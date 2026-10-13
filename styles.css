@@ -1,14 +1,4 @@
-/* ==========================================================
-   Portfolio Nino Wolfsen - één stylesheet voor alle pagina's
-   Opbouw:
-   1. Basis (reset, body, header, nav, footer)  -> geldt overal
-   2. Per pagina (via een class op <body>)       -> geldt alleen daar
-      .page-home, .page-projects, .page-skills, .page-contact
-   3. Responsive (media queries)
-   ========================================================== */
-
-
-/* ---------- 1. BASIS ---------- */
+/* BASIS */
 
 * {
   box-sizing: border-box;
@@ -76,7 +66,7 @@ footer p {
   text-align: center;
 }
 
-/* Glas-kaarten (gedeeld door projecten, vaardigheden en contact) */
+/* Glas kaarten gedeeld door projecten, vaardigheden en contact */
 .project-card,
 .skill-card,
 .contact-card {
@@ -89,7 +79,7 @@ footer p {
 }
 
 
-/* ---------- 2a. PAGINA: HOME (index.html) ---------- */
+/* PAGINA HOME */
 
 .page-home main {
   flex: 1;
@@ -199,7 +189,7 @@ footer p {
 }
 
 
-/* ---------- 2b. PAGINA: PROJECTEN (projecten.html) ---------- */
+/* PAGINA: PROJECTEN */
 
 .projects-container {
   flex: 1;
@@ -301,7 +291,7 @@ footer p {
 }
 
 
-/* ---------- 2c. PAGINA: VAARDIGHEDEN (vaardigheden.html) ---------- */
+/* PAGINA: VAARDIGHEDEN */
 
 .page-skills {
   height: 100vh;
@@ -403,7 +393,7 @@ footer p {
 }
 
 
-/* ---------- 2d. PAGINA: CONTACT (contact.html) ---------- */
+/* PAGINA: CONTACT (contact.html) */
 
 .page-contact main {
   flex: 1;
@@ -529,7 +519,7 @@ textarea:focus {
 }
 
 
-/* ---------- 3. RESPONSIVE ---------- */
+/* RESPONSIVE */
 
 @media screen and (max-width: 950px) {
   .projects-grid {
